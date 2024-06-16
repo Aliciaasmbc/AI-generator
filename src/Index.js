@@ -17,6 +17,10 @@ function generateDestination(event) {
   let prompt = `Generate a travel itinerary for ${instructionsInput.value}`;
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let destinationElement = document.querySelector("#destination");
+  destinationElement.classList.remove("hidden");
+  destinationElement.innerHTML = `<div class="generating">⏳ Generating a 3 days itinerary about ${instructionsInput.value}</div>`;
+
   axios.get(apiURL).then(displayItinerary);
 }
 

@@ -68,11 +68,15 @@ form {
 .destination {
   font-size: 16px;
   background-color: #fff;
-  padding: 20px 20px 5px;
+  padding: 20px 20px 15px;
   border-radius: 20px;
   line-height: 2;
   border-left: 3px solid #885df1;
   box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
+}
+
+.hidden {
+  display: none;
 }
 
 .destination strong {
@@ -83,4 +87,19 @@ footer {
   text-align: center;
   font-size: 13px;
   margin-top: 15px;
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
